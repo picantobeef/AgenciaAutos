@@ -13,36 +13,33 @@ import java.awt.event.ActionListener;
  */
 public class principal1 extends javax.swing.JFrame implements ActionListener {
 
-    panel1 panel1 = new panel1();
+    Menu panel1 = new Menu();
     panel2 panel2 = new panel2();
 
     public principal1() {
         initComponents();
 
-     
-     contenedor.add(panel1);
-     panel1.setVisible(true);
-     panel2.setVisible(false);
-  
-desabilitarbotenes();
+        contenedor.add(panel1);
+        panel1.setVisible(true);
+        panel2.setVisible(false);
 
+        desabilitarbotenes();
 
-           jbanterior.addActionListener(this);
-           jbsiguente.addActionListener(this);
-
-
+        jbanterior.addActionListener(this);
+        jbsiguente.addActionListener(this);
 
     }
-private void desabilitarbotenes(){
-if (panel1.isVisible()){
-jbanterior.setEnabled(false);
-jbsiguente.setEnabled(true);
-} else if(panel2.isVisible()){
-jbanterior.setEnabled(true);
-jbsiguente.setEnabled(false);
-}
-}
-   
+
+    private void desabilitarbotenes() {
+        if (panel1.isVisible()) {
+            jbanterior.setEnabled(false);
+            jbsiguente.setEnabled(true);
+        } else if (panel2.isVisible()) {
+            jbanterior.setEnabled(true);
+            jbsiguente.setEnabled(false);
+        }
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -72,7 +69,6 @@ jbsiguente.setEnabled(false);
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -115,30 +111,28 @@ jbsiguente.setEnabled(false);
     private javax.swing.JButton jbsiguente;
     // End of variables declaration//GEN-END:variables
 
+    @Override
+    public void actionPerformed(ActionEvent ae) {
 
-@Override
-public void actionPerformed(ActionEvent ae){
+        Object evt = ae.getSource();
 
-Object evt = ae.getSource();
+        if (evt.equals(jbanterior)) {
+            panel2.setVisible(false);
+            panel1.setVisible(true);
 
-if (evt.equals(jbanterior)){
-panel2.setVisible(false);
-panel1.setVisible(true);
+            contenedor.add(panel1);
 
-contenedor.add(panel1);
+            contenedor.validate();
+            desabilitarbotenes();
+        } else if (evt.equals(jbsiguente)) {
+            panel2.setVisible(true);
+            panel1.setVisible(false);
 
-contenedor.validate();
-desabilitarbotenes();
-}else if (evt.equals(jbsiguente)){
-panel2.setVisible(true);
-panel1.setVisible(false);
+            contenedor.add(panel2);
 
-contenedor.add(panel2);
-
-contenedor.validate();
-desabilitarbotenes();
-}
-}
-
+            contenedor.validate();
+            desabilitarbotenes();
+        }
+    }
 
 }

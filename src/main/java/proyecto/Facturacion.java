@@ -6,28 +6,31 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+
 public class Facturacion extends javax.swing.JFrame {
-DefaultTableModel model=new DefaultTableModel();
+
+    DefaultTableModel model = new DefaultTableModel();
+
     public Facturacion() {
         initComponents();
         cargaCli();
         tblPro.setModel(model);
-        String titu[]={"Producto","Precio_Uni","Cantidad","Importe"};
+        String titu[] = {"Producto", "Precio_Uni", "Cantidad", "Importe"};
         model.setColumnIdentifiers(titu);
         tblPro.getColumnModel().getColumn(0).setPreferredWidth(200);
     }
-private void cargaCli(){
-    cmbCli.addItem("[Seleccionar]");
-    cmbCli.addItem("Mario Redondo Brenes ");
-    cmbCli.addItem("Diego Martinez Perez ");
-    cmbCli.addItem("Aylin Castro Cordero");
-    cmbCli.addItem("Thomas Nicolas Solano ");
-    cmbCli.addItem("Lalo Garza Brenes ");
-    cmbCli.addItem("Paola Alvarado Tames ");
-    cmbCli.addItem("Anayeli Castro Marin ");
-}
 
-    
+    private void cargaCli() {
+        cmbCli.addItem("[Seleccionar]");
+        cmbCli.addItem("Mario Redondo Brenes ");
+        cmbCli.addItem("Diego Martinez Perez ");
+        cmbCli.addItem("Aylin Castro Cordero");
+        cmbCli.addItem("Thomas Nicolas Solano ");
+        cmbCli.addItem("Lalo Garza Brenes ");
+        cmbCli.addItem("Paola Alvarado Tames ");
+        cmbCli.addItem("Anayeli Castro Marin ");
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -300,75 +303,102 @@ private void cargaCli(){
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cmbCliItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbCliItemStateChanged
-        String Ruc="";
-        if (cmbCli.getSelectedIndex()>0){
+        String Ruc = "";
+        if (cmbCli.getSelectedIndex() > 0) {
             switch (cmbCli.getSelectedIndex()) {
-                case 1:Ruc="10225544";break;
-                case 2:Ruc="10255545";break;
-                case 3:Ruc="5262656060";break;
-                case 4:Ruc="6526251560";break;
-                default : Ruc="62505056215";
+                case 1:
+                    Ruc = "10225544";
+                    break;
+                case 2:
+                    Ruc = "10255545";
+                    break;
+                case 3:
+                    Ruc = "5262656060";
+                    break;
+                case 4:
+                    Ruc = "6526251560";
+                    break;
+                default:
+                    Ruc = "62505056215";
             }
             txtRuc.setText(Ruc);
         }
     }//GEN-LAST:event_cmbCliItemStateChanged
 
     private void cmbProItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbProItemStateChanged
-        String pre="";
-        if (cmbPro.getSelectedIndex()>0){
+        String pre = "";
+        if (cmbPro.getSelectedIndex() > 0) {
             switch (cmbPro.getSelectedIndex()) {
-                case 1:pre="8000";break;
-                case 2:pre="22000";break;
-                case 3:pre="33000";break;
-                case 4:pre="100000";break;
-                case 5:pre="30000";break;
-                case 6:pre="100000";break;
-                case 7:pre="10000";break;
-                default : pre="40000";
+                case 1:
+                    pre = "8000";
+                    break;
+                case 2:
+                    pre = "22000";
+                    break;
+                case 3:
+                    pre = "33000";
+                    break;
+                case 4:
+                    pre = "100000";
+                    break;
+                case 5:
+                    pre = "30000";
+                    break;
+                case 6:
+                    pre = "100000";
+                    break;
+                case 7:
+                    pre = "10000";
+                    break;
+                default:
+                    pre = "40000";
             }
             txtPre.setText(pre);
             txtCan.setText("1");
         }
     }//GEN-LAST:event_cmbProItemStateChanged
- private double redondear(double num){
-        return Math.rint(num*100)/100;
+    private double redondear(double num) {
+        return Math.rint(num * 100) / 100;
     }
-private void calTot(){
-        double S=0,igv,tot;
-        for(int i=0;i<tblPro.getRowCount();i++){
-                S=S+Double.parseDouble(model.getValueAt(i, 3).toString());
-            }
-            S=redondear(S);
-            lblSub.setText(String.valueOf(S));
-            igv=0.13*S;
-            igv=redondear(igv);
-            tot=S*1.09;
-            tot=redondear(tot);
-            lblIGV.setText(String.valueOf(igv));
-            lblTotal.setText(String.valueOf(tot));
+
+    private void calTot() {
+        double S = 0, igv, tot;
+        for (int i = 0; i < tblPro.getRowCount(); i++) {
+            S = S + Double.parseDouble(model.getValueAt(i, 3).toString());
+        }
+        S = redondear(S);
+        lblSub.setText(String.valueOf(S));
+        igv = 0.13 * S;
+        igv = redondear(igv);
+        tot = S * 1.09;
+        tot = redondear(tot);
+        lblIGV.setText(String.valueOf(igv));
+        lblTotal.setText(String.valueOf(tot));
     }
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        String rowData[]=new String[4];
-        rowData[0]=cmbPro.getSelectedItem().toString();
-        rowData[1]=txtPre.getText();
-        rowData[2]=txtCan.getText();
-        Double imp=Double.parseDouble(rowData[1])*Double.parseDouble(rowData[2]);
-        imp=redondear(imp);
-        rowData[3]=imp.toString();
+        String rowData[] = new String[4];
+        rowData[0] = cmbPro.getSelectedItem().toString();
+        rowData[1] = txtPre.getText();
+        rowData[2] = txtCan.getText();
+        Double imp = Double.parseDouble(rowData[1]) * Double.parseDouble(rowData[2]);
+        imp = redondear(imp);
+        rowData[3] = imp.toString();
         model.addRow(rowData);
         calTot();
     }//GEN-LAST:event_btnAddActionPerformed
- private void eliminar(){
-       int fil;
-       if (model.getRowCount()>0){
-           if (tblPro.getSelectedRow()!=-1){
-               fil=tblPro.getSelectedRow();
-               model.removeRow(fil);
-               calTot();
-           }else{
-               JOptionPane.showMessageDialog(null, "Seleccione Una Fila");
-           }
-       }else{ JOptionPane.showMessageDialog(null, "No hay Filas en la Tabla");}
+    private void eliminar() {
+        int fil;
+        if (model.getRowCount() > 0) {
+            if (tblPro.getSelectedRow() != -1) {
+                fil = tblPro.getSelectedRow();
+                model.removeRow(fil);
+                calTot();
+            } else {
+                JOptionPane.showMessageDialog(null, "Seleccione Una Fila");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay Filas en la Tabla");
+        }
     }
     private void btnEliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliActionPerformed
         eliminar();

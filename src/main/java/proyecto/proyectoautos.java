@@ -6,18 +6,14 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 
-
 public class proyectoautos extends javax.swing.JFrame {
 
-
-   
     public proyectoautos() {
-{
-        initComponents();
+        {
+            initComponents();
+        }
     }
-}
-         
-  
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -41,6 +37,11 @@ public class proyectoautos extends javax.swing.JFrame {
 
         jbventana.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jbventana.setText("Iniciar ");
+        jbventana.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbventanaMouseClicked(evt);
+            }
+        });
         jbventana.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbventanaActionPerformed(evt);
@@ -68,7 +69,7 @@ public class proyectoautos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jlnombredeempresa, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbventana, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -83,9 +84,14 @@ public class proyectoautos extends javax.swing.JFrame {
     }//GEN-LAST:event_jbsalirActionPerformed
 
     private void jbventanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbventanaActionPerformed
-       principal1 h = new principal1();
-         h.setVisible (true);
+        Menu h = new Menu();
+        h.setVisible(true);
     }//GEN-LAST:event_jbventanaActionPerformed
+
+    private void jbventanaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbventanaMouseClicked
+        Menu h = new Menu();
+        h.setVisible(true);
+    }//GEN-LAST:event_jbventanaMouseClicked
 
     /**
      * @param args the command line arguments
