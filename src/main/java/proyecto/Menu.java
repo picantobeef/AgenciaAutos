@@ -234,7 +234,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jbFacturacionActionPerformed
 
     private void jbClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbClientesActionPerformed
-        Clientes b = new Clientes();
+        GestionClientes b = new GestionClientes();
         b.setVisible(true);
     }//GEN-LAST:event_jbClientesActionPerformed
 
