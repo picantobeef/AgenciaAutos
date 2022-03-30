@@ -41,8 +41,10 @@ public class Login extends javax.swing.JFrame {
         jlLimpiar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 51));
@@ -58,11 +60,14 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Contraseña:");
 
-        jtfUserName.setBackground(new java.awt.Color(204, 204, 204));
         jtfUserName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jtfPassword.setBackground(new java.awt.Color(204, 204, 204));
         jtfPassword.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtfPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfPasswordActionPerformed(evt);
+            }
+        });
 
         jbIngresar.setBackground(new java.awt.Color(204, 204, 204));
         jbIngresar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -99,7 +104,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton2))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
+                .addContainerGap(77, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jlLimpiar)
@@ -138,7 +143,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jlLimpiar)
                 .addGap(18, 18, 18)
                 .addComponent(jbIngresar)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,6 +158,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIngresarActionPerformed
@@ -179,6 +185,10 @@ public class Login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jtfPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfPasswordActionPerformed
 
     /**
      * @param args the command line arguments

@@ -31,10 +31,12 @@ public class LoadingScreen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jpbCargando.setBackground(new java.awt.Color(204, 204, 204));
         jpbCargando.setForeground(new java.awt.Color(204, 0, 51));
+        jpbCargando.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         jlTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlTitulo.setForeground(new java.awt.Color(204, 0, 51));
@@ -61,7 +63,7 @@ public class LoadingScreen extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(108, 108, 108)
                                 .addComponent(jlMensajeInicio)))
-                        .addGap(0, 66, Short.MAX_VALUE)))
+                        .addGap(0, 62, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -69,7 +71,7 @@ public class LoadingScreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jlTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jlMensajeInicio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jpbCargando, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,7 +103,8 @@ public class LoadingScreen extends javax.swing.JFrame {
         
         try {
             for (int i = 0; i <= 100; i++) {
-                Thread.sleep(40);
+                Thread.sleep(50);
+                System.out.println(i);
                 cargando.jpbCargando.setValue(i);
             }
         

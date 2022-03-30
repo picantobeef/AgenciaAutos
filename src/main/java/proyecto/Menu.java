@@ -32,68 +32,74 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        lbverinventario = new javax.swing.JButton();
-        jbfacturacion = new javax.swing.JButton();
-        jbclientes = new javax.swing.JButton();
-        jbregistroempleados = new javax.swing.JButton();
-        jbclientesmenbrecias = new javax.swing.JButton();
-        jbsalir = new javax.swing.JButton();
+        jlTitulo = new javax.swing.JLabel();
+        lbVerInventario = new javax.swing.JButton();
+        jbFacturacion = new javax.swing.JButton();
+        jbClientes = new javax.swing.JButton();
+        jbRegistroEmpleados = new javax.swing.JButton();
+        jbClientesMenbresia = new javax.swing.JButton();
+        jbSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Sistema de Gestión");
+        jlTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jlTitulo.setText("Menú Principal");
 
-        lbverinventario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lbverinventario.setText("Inventario de autos ");
-        lbverinventario.addActionListener(new java.awt.event.ActionListener() {
+        lbVerInventario.setBackground(new java.awt.Color(204, 204, 204));
+        lbVerInventario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbVerInventario.setText("Inventario de autos ");
+        lbVerInventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lbverinventarioActionPerformed(evt);
+                lbVerInventarioActionPerformed(evt);
             }
         });
 
-        jbfacturacion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbfacturacion.setText("Facturacion");
-        jbfacturacion.addActionListener(new java.awt.event.ActionListener() {
+        jbFacturacion.setBackground(new java.awt.Color(204, 204, 204));
+        jbFacturacion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jbFacturacion.setText("Facturacion");
+        jbFacturacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbfacturacionActionPerformed(evt);
+                jbFacturacionActionPerformed(evt);
             }
         });
 
-        jbclientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbclientes.setText("Clientes");
-        jbclientes.addActionListener(new java.awt.event.ActionListener() {
+        jbClientes.setBackground(new java.awt.Color(204, 204, 204));
+        jbClientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jbClientes.setText("Clientes");
+        jbClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbclientesActionPerformed(evt);
+                jbClientesActionPerformed(evt);
             }
         });
 
-        jbregistroempleados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbregistroempleados.setText("Registro empleado ");
-        jbregistroempleados.addActionListener(new java.awt.event.ActionListener() {
+        jbRegistroEmpleados.setBackground(new java.awt.Color(153, 153, 153));
+        jbRegistroEmpleados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jbRegistroEmpleados.setText("Registro empleado ");
+        jbRegistroEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbregistroempleadosActionPerformed(evt);
+                jbRegistroEmpleadosActionPerformed(evt);
             }
         });
 
-        jbclientesmenbrecias.setBackground(new java.awt.Color(255, 102, 102));
-        jbclientesmenbrecias.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbclientesmenbrecias.setText("Clientes con membresía VIP ");
-        jbclientesmenbrecias.addActionListener(new java.awt.event.ActionListener() {
+        jbClientesMenbresia.setBackground(new java.awt.Color(255, 102, 102));
+        jbClientesMenbresia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jbClientesMenbresia.setText("Clientes con membresía VIP ");
+        jbClientesMenbresia.setBorder(null);
+        jbClientesMenbresia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbclientesmenbreciasActionPerformed(evt);
+                jbClientesMenbresiaActionPerformed(evt);
             }
         });
 
-        jbsalir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jbsalir.setText("Salir");
-        jbsalir.addActionListener(new java.awt.event.ActionListener() {
+        jbSalir.setBackground(new java.awt.Color(204, 204, 204));
+        jbSalir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jbSalir.setText("Cerrar Sesión");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbsalirActionPerformed(evt);
+                jbSalirActionPerformed(evt);
             }
         });
 
@@ -101,45 +107,46 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(39, 39, 39)
-                .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(272, 272, 272)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jbclientesmenbrecias)
+                        .addComponent(jlTitulo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbregistroempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jbSalir))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jbclientes, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbverinventario, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                        .addComponent(jbfacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(34, 34, 34))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jbClientesMenbresia, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jbRegistroEmpleados, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jbClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbVerInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jbFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(34, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSalir)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel1)))
-                .addGap(53, 53, 53)
+                        .addGap(20, 20, 20)
+                        .addComponent(jlTitulo)))
+                .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbverinventario, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbfacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbVerInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jbclientes, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbclientesmenbrecias, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbregistroempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 164, Short.MAX_VALUE))
+                .addComponent(jbClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbRegistroEmpleados, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                    .addComponent(jbClientesMenbresia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -150,19 +157,18 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbsalirActionPerformed
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jbsalirActionPerformed
+    }//GEN-LAST:event_jbSalirActionPerformed
 
-    private void lbverinventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbverinventarioActionPerformed
+    private void lbVerInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbVerInventarioActionPerformed
         List<Autos> vehiculo = new ArrayList();
         Autos vehiculo1 = new Motocicletas("2255", "Honda", "CRF 250 ",
             "Rojo ", "1999", "Manual ",
@@ -220,19 +226,19 @@ public class Menu extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, vehiculos.mostrarDatos());
         }
 
-    }//GEN-LAST:event_lbverinventarioActionPerformed
+    }//GEN-LAST:event_lbVerInventarioActionPerformed
 
-    private void jbfacturacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbfacturacionActionPerformed
+    private void jbFacturacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFacturacionActionPerformed
         Facturacion o = new Facturacion();
         o.setVisible(true);
-    }//GEN-LAST:event_jbfacturacionActionPerformed
+    }//GEN-LAST:event_jbFacturacionActionPerformed
 
-    private void jbclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbclientesActionPerformed
-        clientes b = new clientes();
+    private void jbClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbClientesActionPerformed
+        Clientes b = new Clientes();
         b.setVisible(true);
-    }//GEN-LAST:event_jbclientesActionPerformed
+    }//GEN-LAST:event_jbClientesActionPerformed
 
-    private void jbregistroempleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbregistroempleadosActionPerformed
+    private void jbRegistroEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistroEmpleadosActionPerformed
         List<Persona> empleado = new ArrayList();
         Persona empleado1 = new Empleado(475000.00, "Ventas",
             "Rafael ", "Herrero", "3-5689-5321",
@@ -255,9 +261,9 @@ public class Menu extends javax.swing.JFrame {
             //            JOptionPane.showMessageDialog(null, "Lista de Empleados ");
             JOptionPane.showMessageDialog(null, empleados.mostrarDatos());
         }
-    }//GEN-LAST:event_jbregistroempleadosActionPerformed
+    }//GEN-LAST:event_jbRegistroEmpleadosActionPerformed
 
-    private void jbclientesmenbreciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbclientesmenbreciasActionPerformed
+    private void jbClientesMenbresiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbClientesMenbresiaActionPerformed
         List<Persona> cliente = new ArrayList();
         Persona cliente1 = new Cliente("Marco", "Polo", "1-1234-1234",
             "5555-5555", "Santa Rosa, Heredia", "marcopolo33@live.com");
@@ -274,10 +280,10 @@ public class Menu extends javax.swing.JFrame {
         cliente.add(cliente4);
 
         for (Persona clientes : cliente) {
-            //            JOptionPane.showMessageDialog(null, "Lista de clientes ");
+            //            JOptionPane.showMessageDialog(null, "Lista de Clientes ");
             JOptionPane.showMessageDialog(null, clientes.mostrarDatos());
         }
-    }//GEN-LAST:event_jbclientesmenbreciasActionPerformed
+    }//GEN-LAST:event_jbClientesMenbresiaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,13 +321,13 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbclientes;
-    private javax.swing.JButton jbclientesmenbrecias;
-    private javax.swing.JButton jbfacturacion;
-    private javax.swing.JButton jbregistroempleados;
-    private javax.swing.JButton jbsalir;
-    private javax.swing.JButton lbverinventario;
+    private javax.swing.JButton jbClientes;
+    private javax.swing.JButton jbClientesMenbresia;
+    private javax.swing.JButton jbFacturacion;
+    private javax.swing.JButton jbRegistroEmpleados;
+    private javax.swing.JButton jbSalir;
+    private javax.swing.JLabel jlTitulo;
+    private javax.swing.JButton lbVerInventario;
     // End of variables declaration//GEN-END:variables
 }

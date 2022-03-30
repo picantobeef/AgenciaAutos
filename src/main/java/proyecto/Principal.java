@@ -9,7 +9,7 @@ Version 2, 22 Mar 2022
 public class Principal {
 
     public static void main(String[] args) {
-      proyectoautos t = new proyectoautos();
+      InventarioAutos t = new InventarioAutos();
       t.setVisible (true);
 }
 

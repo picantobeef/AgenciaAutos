@@ -5,24 +5,24 @@ abstract class Persona {
     private String Nombre;
     private String Apellidos;
     private String Cedula;
-    private String Teléfono;
-    private String Dirección;
+    private String Telefono;
+    private String Direccion;
     private String Email;
 
-    public Persona(String Nombre, String Apellidos, String Cedula, String Teléfono,
-            String Dirección, String Email) {
+    public Persona(String Nombre, String Apellidos, String Cedula, String Telefono,
+            String Direccion, String Email) {
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
         this.Cedula = Cedula;
-        this.Teléfono = Teléfono;
-        this.Dirección = Dirección;
+        this.Telefono = Telefono;
+        this.Direccion = Direccion;
         this.Email = Email;
     }
 
     public String mostrarDatos() {
         return "\nNombre: " + Nombre + "\nApellidos: "
                 + Apellidos + "\nCédula: " + Cedula + "\nTeléfono: "
-                + Teléfono + "\nDirección: " + Dirección + "\nEmail: " + Email;
+                + Telefono + "\nDirección: " + Direccion + "\nEmail: " + Email;
     }
 
     public String getEmail() {
@@ -57,20 +57,20 @@ abstract class Persona {
         this.Cedula = Cedula;
     }
 
-    public String getTeléfono() {
-        return Teléfono;
+    public String getTelefono() {
+        return Telefono;
     }
 
-    public void setTeléfono(String Teléfono) {
-        this.Teléfono = Teléfono;
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
     }
 
-    public String getDirección() {
-        return Dirección;
+    public String getDireccion() {
+        return Direccion;
     }
 
-    public void setDirección(String Dirección) {
-        this.Dirección = Dirección;
+    public void setDireccion(String Direccion) {
+        this.Direccion = this.Direccion;
     }
 
 }
