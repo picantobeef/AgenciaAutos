@@ -1,4 +1,3 @@
-
 package proyecto;
 
 /**
@@ -26,7 +25,8 @@ public class LoadingScreen extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jpbCargando = new javax.swing.JProgressBar();
         jlTitulo = new javax.swing.JLabel();
-        jlMensajeInicio = new javax.swing.JLabel();
+        jlPorcentajeCarga = new javax.swing.JLabel();
+        jlMensajeInicio1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -42,9 +42,13 @@ public class LoadingScreen extends javax.swing.JFrame {
         jlTitulo.setForeground(new java.awt.Color(204, 0, 51));
         jlTitulo.setText("Agencia de Vehículos");
 
-        jlMensajeInicio.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jlMensajeInicio.setForeground(new java.awt.Color(204, 0, 51));
-        jlMensajeInicio.setText("Cargando... Por favor, espere.");
+        jlPorcentajeCarga.setBackground(new java.awt.Color(255, 204, 204));
+        jlPorcentajeCarga.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jlPorcentajeCarga.setForeground(new java.awt.Color(204, 0, 51));
+
+        jlMensajeInicio1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jlMensajeInicio1.setForeground(new java.awt.Color(204, 0, 51));
+        jlMensajeInicio1.setText("Cargando... Por favor, espere.");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -56,26 +60,32 @@ public class LoadingScreen extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jpbCargando, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(73, 73, 73)
-                                .addComponent(jlTitulo))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(108, 108, 108)
-                                .addComponent(jlMensajeInicio)))
+                        .addGap(73, 73, 73)
+                        .addComponent(jlTitulo)
                         .addGap(0, 62, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jlMensajeInicio1)
+                        .addGap(102, 102, 102))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jlPorcentajeCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(165, 165, 165))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jlTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                .addComponent(jlMensajeInicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addComponent(jlMensajeInicio1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jpbCargando, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jlPorcentajeCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -97,20 +107,19 @@ public class LoadingScreen extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
         LoadingScreen cargando = new LoadingScreen();
         cargando.setVisible(true);
-        
+
         try {
             for (int i = 0; i <= 100; i++) {
                 Thread.sleep(50);
-                System.out.println(i);
+
                 cargando.jpbCargando.setValue(i);
             }
-        
-        
+
         } catch (Exception e) {
-        
+
         }
         new Login().setVisible(true);
         cargando.dispose();
@@ -118,7 +127,8 @@ public class LoadingScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel jlMensajeInicio;
+    private javax.swing.JLabel jlMensajeInicio1;
+    private javax.swing.JLabel jlPorcentajeCarga;
     private javax.swing.JLabel jlTitulo;
     private javax.swing.JProgressBar jpbCargando;
     // End of variables declaration//GEN-END:variables

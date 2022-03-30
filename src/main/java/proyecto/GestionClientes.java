@@ -138,6 +138,11 @@ public class GestionClientes extends javax.swing.JFrame {
         jlEmail.setText("E-mail:");
 
         jbSalir.setText("X");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalirActionPerformed(evt);
+            }
+        });
 
         jbMenu.setText("Menú");
         jbMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -282,7 +287,8 @@ public class GestionClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuActionPerformed
-        // TODO add your handling code here:
+        Menu o = new Menu();
+        o.setVisible(true);
     }//GEN-LAST:event_jbMenuActionPerformed
 
     private void jtfNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombreActionPerformed
@@ -304,6 +310,10 @@ public class GestionClientes extends javax.swing.JFrame {
     private void jtfTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTelefonoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfTelefonoActionPerformed
+
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_jbSalirActionPerformed
 
     public static void Listar() {
         DefaultListModel Md = new DefaultListModel();
